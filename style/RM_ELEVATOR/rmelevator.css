@@ -56,8 +56,9 @@ article#introducao-descricao{
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: left;
+    text-align: justify;
     line-height: 1.5em;
+    text-indent: 5vw;
 }
 
 div#introducao-video{
@@ -162,6 +163,7 @@ article#prototipo-descricao{
     align-items: center;
     width:35%;
     text-align: justify;
+    text-indent: 5vw;
     font-size: 1.15rem;
     line-height: 1.5rem;
     border:3px double var(--color5);
