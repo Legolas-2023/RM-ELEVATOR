@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#AD0500">
+
+	<link rel="stylesheet" href="../style/header&footer.css">
+	<link rel="stylesheet" href="../style/Orçamento.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link rel="shortcut icon" href="../assets/rm_elevator.ico" type="image/x-icon">
+	<title>RM Elevator | Orçamento</title>
+</head>
+<body>
+	<header id="cabecalho">
+		<figure id="cabecalho-figura">
+			<img src="../assets/rm_elevator_thumb.gif" id="cabecalho-imagem">
+			<figcaption id="cabecalho-caption"><a href="../index.html">RM Elevator</a></figcaption>
+		</figure>
+
+		<input type="button" value="☰" id="navopen">
+
+		<nav id="navegacao">
+
+			<input type="button" value="&times;" id="navclose">
+
+			<ul id="cabecalho-navegacao">
+				<li class="paginas-navegacao"><a href="Menu.html">Menu</a></li>
+				<li class="paginas-navegacao"><a href="Empresa.html">Empresa</a></li>
+				<li class="paginas-navegacao"><a href="Produtos.html">Produtos</a></li>
+				<li class="paginas-navegacao"><a href="Orçamento.html">Orçamento</a></li>
+				<li class="paginas-navegacao"><a href="Contato.html">Contato</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h1 id="orcamentoMainTitulo">Orçamento</h1>
+
+		<section id="orcamento">
+			<h2 id="orcamentoTitulo">SOLICITE UMA COTAÇÃO<h2>
+			<h3 id="orcamentoSubtitulo">Conte mais da sua demanda e entraremos em contato</h3>
+		
+			<form id="orcamento_formulario">
+				<h4> Dados do solicitante: </h4>
+
+				<legend>*Campos Obrigatórios</legend>
+
+				<fieldset id="dados_iniciais">
+					<label for="nome">
+						<input type="text" name="nome" id="nome" class="orcamento-campoInput" autocomplete="off" placeholder="Nome*" required>
+					</label>
+					<label for="empresa">
+						<input type="text" name="empresa" id="empresa" class="orcamento-campoInput" autocomplete="off" placeholder="Empresa*" required>
+					</label>
+					<label for="e-mail">
+						<input type="email" name="e-mail" id="email" class="orcamento-campoInput" autocomplete="off" placeholder="E-mail*" required minlength="5">
+					</label>
+					<label for="telefone">
+						<input type="text" name="telefone" id="telefone" class="orcamento-campoInput" autocomplete="off" placeholder="Telefone*" required  minlength="5" maxlength="15">
+					</label>
+					<label for="cep">
+						<input type="text" name="cep" id="cep" class="orcamento-campoInput" autocomplete="off" placeholder="CEP*" required minlength="2" maxlength="11">
+						<div id="erro"></div>
+					</label>
+					<label for="cidade">
+						<input type="text" name="cidade" id="cidade" class="orcamento-campoInput" autocomplete="off" placeholder="Cidade*" required>
+					</label>
+					<label for="estado">
+						<input type="text" name="estado" id="estado" class="orcamento-campoInput" autocomplete="off" placeholder="Estado*" required>
+					</label>
+				</fieldset>
+
+				<h4>Informações do equipamento:</h4>
+				
+				<fieldset id="equipamento">
+					<div id="orcamento-equipamento">
+						<p class="orcamento-paragrafo">Equipamento e quantidade</p>
+						<select class="orcamento-campoInput">
+							<option disabled selected></option>
+							<option>Plataforma Aérea Tesoura</option>
+							<option>Plataforma Aérea Diesel</option>
+							<option>Plataforma Elevatória Articulada Elétrica E450AJ</option>
+							<option>Plataforma Elevatória Articulada Diesel</option>
+							<option>Plataforma Pantográfica</option>
+							<option>Esteira Transportadora Inclinada E Horizontal</option>
+							<option>Esteira Transportadora com Painel CLP20</option>
+							<option>Esteira Transportadora Comum</option>
+							<option>Esteira De Roletes Livres/Motorizados</option>
+							<option>Esteira de Roletes Motorizadas com Pés</option>
+							<option>Esteiras Transportadora Articulada</option>
+						</select>
+						<label for="quantidade">
+							<input type="number" name="quantidade" id="quantidade" class="orcamento-campoInput" autocomplete="off" placeholder="Quantidade*" required>
+						</label>
+					</div>
+
+					<div id="orcamento-periodo">
+						<p class="orcamento-paragrafo">Período</p>
+						<input type="number" id="periodo" class="orcamento-campoInput" autocomplete="off" placeholder="Número de dias ou meses*" required></input>
+						<select>
+							<option>Dias</option>
+							<option>Meses</option>
+						</select>
+					</div>
+				</fieldset>
+
+				<fieldset id="adicional">
+					<div id="interesse">
+						<p class="orcamento-paragrafo">Interesse:</p>
+							<label for="Aluguel"> 
+								<input type="radio" id="Aluguel" name="interesse" required>
+								Aluguel
+							</label>
+							
+							<label for="Venda"> 
+								<input type="radio" id="Venda" name="interesse" required>
+								Venda
+							</label>
+					</div>
+
+					<div id="operador">
+						<p class="orcamento-paragrafo">Precisa de Operador?</p>
+						<label for="SIM">
+							<input type="radio" id="SIM" name="operador" required>
+							Sim
+						</label>
+						<label for="NAO">
+							<input type="radio" id="NAO" name="operador" required>
+							Não
+						</label>
+					</div>
+
+				</fieldset>
+				
+					<button id="orcamento-botao">Solicitar Orçamento </button>
+			</form>
+
+		</section>
+	</main>
+	
+	<footer id="rodape">
+		<section id="redes">
+			<h1 class="titulo-menu">REDES SOCIAIS</h1>
+			
+			<article class="rede-social">
+
+				<div class="circle">
+					<a href="https://www.youtube.com/@RMELEVATOR">
+						<i class="bi bi-youtube"></i>
+					</a>
+				</div>
+
+				<div class="circle">
+					<a href="https://www.instagram.com/rm_elevator/">
+						<i class="bi bi-instagram"></i>
+					</a>
+				</div>
+
+				<div class="circle">
+					<a href="">
+						<i class="bi bi-facebook"></i>
+					</a>
+				</div>		
+						
+			</article>
+			<p id="direitos">
+				©2023. Todos os direitos reservados para RM Elevator.
+			</p>
+		</section>
+
+		<section id="logo">
+			<img id="logo-imagem" src="https://static.wixstatic.com/media/a4194e_89b7e2604a844a30bae9cfa283a27fcd~mv2.png/v1/fill/w_600,h_347,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/RM%20ELEVATOR.png">
+		</section>
+
+		<section id="localizacao">
+			<article id="localizacao-one">
+				<h1 class="titulo-menu">ONDE ESTAMOS</h1>
+				<p id="localizacao-one-pgr">
+				Matriz: Av. José Amperes Sebastião, <br>
+				898 Campos Do Jordão, São Paulo (SP) <br>
+				CNPJ:89.765.789/0001-78
+				</p>
+			</article>
+
+			<article id="servico">
+				<h1>SERVIÇO DE ATENDIMENTO AO CONSUMIDOR</h1>
+				<p>0800 040 1541</p>
+			</article>
+		</section>
+	</footer>
+</body>
+<script src="../js/script.js"></script>
+<script src="../js/validacaoCEP.js"></script>
+
+</html>
